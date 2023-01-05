@@ -1,0 +1,81 @@
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999999;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileImg img {
+  width: 75px;
+}
+
+.sideLink {
+  color: #000;
+  text-decoration: none;
+  padding: 10px 14px;
+}
+
+.sideLink:hover {
+  background-color: #bfd8ff;
+  color: #000;
+}
+
+.myHeader {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.myLight,
+.modal-header {
+  color: #000;
+}
+
+.darkBlue,
+.card-header,
+.modal-header {
+  background-color: #fff;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.card-header {
+  color: #000;
+}
+
+.btn-primary,
+.darkBluebtn button {
+  background-color: #1093ff;
+  color: #fff;
+}
+
+.lightBlue,
+.modal-body {
+  background-color: #fff;
+}
+
+.noBorder {
+  --bs-card-border-color: none;
+  border-color: none;
+}
+
+body {
+  background-color: #fff;
+}
+
+.myLogin{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
