@@ -12,6 +12,9 @@ const purchases = require("./purchases");
 const sales = require("./sales");
 const inventory = require("./inventory");
 const productions = require("./productions");
+const finishedgoods = require("./finishedgoods");
+const payments = require("./payments");
+const backup = require("./backup");
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 
@@ -38,6 +41,9 @@ route.use("/capitals", capitals);
 route.use("/salary", salary);
 route.use("/purchases", purchases);
 route.use("/sales", sales);
+route.use("/backup", backup);
+route.use("/payments", payments);
+route.use("/finishedgoods", finishedgoods);
 route.use("/productions", productions);
 route.use("/inventory", inventory);
 
