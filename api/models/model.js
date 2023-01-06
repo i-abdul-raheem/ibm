@@ -179,19 +179,19 @@ const salarySchema = Schema({
 const purchaseSchema = Schema({
   vendor: {
     type: String,
-    required: true
+    required: true,
   },
   paidAmount: {
     type: Number,
-    required: true
+    required: true,
   },
   rawMaterial: {
     type: Array,
-    required: true
+    required: true,
   },
   expense: {
     type: Array,
-    default: null
+    default: null,
   },
   date: {
     type: String,
@@ -203,26 +203,26 @@ const purchaseSchema = Schema({
   },
   returns: {
     type: Array,
-    default: []
-  }
+    default: [],
+  },
 });
 
 const saleSchema = Schema({
   customer: {
     type: String,
-    required: true
+    required: true,
   },
   receivedAmount: {
     type: Number,
-    required: true
+    required: true,
   },
   product: {
     type: Array,
-    required: true
+    required: true,
   },
   expense: {
     type: Array,
-    default: null
+    default: null,
   },
   date: {
     type: String,
@@ -234,26 +234,26 @@ const saleSchema = Schema({
   },
   returns: {
     type: Array,
-    default: []
-  }
+    default: [],
+  },
 });
 
 const productionSchema = Schema({
   product: {
     type: String,
-    required: true
+    required: true,
   },
   quantity: {
     type: Number,
-    required: true
-  }, 
+    required: true,
+  },
   rawMaterial: {
     type: Array,
-    required: true
+    required: true,
   },
   expense: {
     type: Array,
-    default: []
+    default: [],
   },
   date: {
     type: String,
@@ -263,13 +263,32 @@ const productionSchema = Schema({
     type: String,
     required: true,
   },
-  status:{
+  status: {
     type: String,
-    required: true
+    required: true,
   },
   updateDataRequest: {
     type: Object,
-    default: null
+    default: null,
+  },
+});
+
+const userSchema = Schema({
+  employeeId: {
+    required: true,
+    type: String,
+  },
+  password: {
+    required: true,
+    type: String,
+  },
+  access: {
+    required: true,
+    type: Array,
+  },
+  status: {
+    type: Boolean,
+    default: true
   }
 });
 
@@ -285,6 +304,7 @@ const Salary = mongoose.model("Salary", salarySchema);
 const Purchase = mongoose.model("Purchase", purchaseSchema);
 const Sale = mongoose.model("Sale", saleSchema);
 const Production = mongoose.model("Production", productionSchema);
+const User = mongoose.model("User", userSchema);
 
 module.exports = {
   Department,
@@ -298,5 +318,6 @@ module.exports = {
   Salary,
   Purchase,
   Sale,
-  Production
+  Production,
+  User,
 };
